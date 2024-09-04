@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "admin",
+      "role": "admin",
+      "email": "lofifuniture@admin.vn",
+      "phone": "012345789",
+      "city": "",
+      "district": "",
+      "ward": "",
+      "address": ""
+    },
+    {
+      "id": 2,
+      "name": "Ngô Xuân Hoàng",
+      "password": "1234567",
+      "role": "client",
+      "email": "ngoxuanhoang@gmail.com",
+      "phone": "012345789",
+      "city": "",
+      "district": "",
+      "ward": "",
+      "address": ""
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Tuấn Anh",
+      "password": "1234567",
+      "role": "client",
+      "email": "ngoxuanhoang@gmail.com",
+      "phone": "012345789",
+      "city": "",
+      "district": "",
+      "ward": "",
+      "address": ""
+    }
+  ]
+}
