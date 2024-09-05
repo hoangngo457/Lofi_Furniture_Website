@@ -36,5 +36,271 @@
       "ward": "",
       "address": ""
     }
+  ],
+  "discount": [
+    {
+      "id": 1,
+      "code_discount": "MAGIAM20%",
+      "value_discout": 0.2,
+      "expiration_date": "10/10/2025",
+      "condition": "đơn hàng giá trị tối thiểu 1.000.000đ",
+      "type": "discount"
+    },
+    {
+      "id": 2,
+      "code_discount": "MAGIAM10%",
+      "value_discout": 0.1,
+      "expiration_date": "10/10/2025",
+      "condition": "đơn hàng giá trị tối thiểu 500.000đ",
+      "type": "discount"
+    },
+    {
+      "id": 3,
+      "code_discount": "MAGIAM50k",
+      "value_discout": 50000,
+      "expiration_date": "10/10/2025",
+      "condition": "đơn hàng giá trị tối thiểu 500.000đ",
+      "type": "discount"
+    },
+    {
+      "id": 4,
+      "code_discount": "MAFREESHIP",
+      "value_discout": 40000,
+      "expiration_date": "10/10/2025",
+      "condition": "đơn hàng giá trị tối thiểu 500.000đ",
+      "type": "freeship"
+    }
+  ],
+  "news-category": [
+    {
+      "id": 1,
+      "name": "Hướng dẫn mua hàng"
+    },
+    {
+      "id": 1,
+      "name": "Chính sách đổi trả"
+    },
+    {
+      "id": 1,
+      "name": "Chính sách bán hàng"
+    },
+    {
+      "id": 1,
+      "name": "Chính sách giao hàng"
+    },
+    {
+      "id": 1,
+      "name": "Bảo mật thông tin cá nhân"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Xu hướng lựa chọn thiết bị vệ sinh năm 2023 có gì khác biệt?",
+      "summary": "Thị trường thiết bị vệ sinh luôn có những sự thay đổi liên tục xuất phát từ nhu cầu, thị hiếu của người tiêu dùng hay những điều kiện khách quan khác. Mời mọi người cùng phân tích để cảm nhận những điểm khác biệt rõ nét nhất của xu hướng lựa chọn thiết bị dành cho phòng vệ sinh năm nay nhé!",
+      "author": "Abc",
+      "post_date": "20/8/2024",
+      "content": ""
+    }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "name": "Ngô Xuân Hoàng",
+      "emai": "ngoxuanhoang@gmail.com",
+      "phone": "012345789",
+      "content": "Hỗ trợ abc",
+      "idUser": "",
+      "status": "chưa xem"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Tuấn Anh",
+      "emai": "nguyentuananh@gmail.com",
+      "phone": "012345789",
+      "content": "Hỗ trợ abc",
+      "idUser": "",
+      "status": "chưa phản hồi"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Tuấn Anh",
+      "emai": "nguyentuananh@gmail.com",
+      "phone": "012345789",
+      "content": "Hỗ trợ abc",
+      "idUser": "",
+      "status": "đã phản hồi"
+    }
+  ],
+  "question": [
+    {
+      "id": 1,
+      "question": "Cách tự lắp đặt vòi sen tại nhà?",
+      "answer": "Trong các trường hợp cần thiết, bạn có thể tự tay thay thế vòi sen tại nhà mà không cần sự hỗ trợ từ thợ sửa chữa. Cùng Lofi Furniture tham khảo và làm theo các bước sau để tự thao tác lắp đặt vòi sen dễ dàng nhấtTháo vòi sen bị hỏng, hoặc nút chặn ra khỏi đầu chờ. Bạn nên lưu ý khóa hệ thống van nước trước khi thực hiện. Vệ sinh hệ thống đường cấp nước bằng cách mở nước chảy tự do trong 4 - 5 phút.Dùng băng tan cuốn chân sen (2 ống lệch tâm) rồi lắp vào 2 đầu chờ cấp nước đã có sẵn trên tường, siết chặt đồng thời chỉnh khoảng cách giữa 2 ống này là 150mm.Lắp gioăng cao su vào 2 ốc trên thân sen rồi gắn vào 2 chân sen đã chuẩn bị xong ở bước 3 và siết chặt đai ốc. Gắn giá treo tay sen (chân cài sen tắm) vào tường tại độ cao thích hợp với nhu cầu gia đình. Cuối cùng, lắp 2 đầu của dây sen với bát sen và thân vòi hoa sen"
+    },
+    {
+      "id": 2,
+      "question": "Cách tự lắp đặt vòi sen tại nhà?",
+      "answer": "Trong các trường hợp cần thiết, bạn có thể tự tay thay thế vòi sen tại nhà mà không cần sự hỗ trợ từ thợ sửa chữa. Cùng Lofi Furniture tham khảo và làm theo các bước sau để tự thao tác lắp đặt vòi sen dễ dàng nhấtTháo vòi sen bị hỏng, hoặc nút chặn ra khỏi đầu chờ. Bạn nên lưu ý khóa hệ thống van nước trước khi thực hiện. Vệ sinh hệ thống đường cấp nước bằng cách mở nước chảy tự do trong 4 - 5 phút.Dùng băng tan cuốn chân sen (2 ống lệch tâm) rồi lắp vào 2 đầu chờ cấp nước đã có sẵn trên tường, siết chặt đồng thời chỉnh khoảng cách giữa 2 ống này là 150mm.Lắp gioăng cao su vào 2 ốc trên thân sen rồi gắn vào 2 chân sen đã chuẩn bị xong ở bước 3 và siết chặt đai ốc. Gắn giá treo tay sen (chân cài sen tắm) vào tường tại độ cao thích hợp với nhu cầu gia đình. Cuối cùng, lắp 2 đầu của dây sen với bát sen và thân vòi hoa sen"
+    },
+    {
+      "id": 3,
+      "question": "Cách tự lắp đặt vòi sen tại nhà?",
+      "answer": "Trong các trường hợp cần thiết, bạn có thể tự tay thay thế vòi sen tại nhà mà không cần sự hỗ trợ từ thợ sửa chữa. Cùng Lofi Furniture tham khảo và làm theo các bước sau để tự thao tác lắp đặt vòi sen dễ dàng nhấtTháo vòi sen bị hỏng, hoặc nút chặn ra khỏi đầu chờ. Bạn nên lưu ý khóa hệ thống van nước trước khi thực hiện. Vệ sinh hệ thống đường cấp nước bằng cách mở nước chảy tự do trong 4 - 5 phút.Dùng băng tan cuốn chân sen (2 ống lệch tâm) rồi lắp vào 2 đầu chờ cấp nước đã có sẵn trên tường, siết chặt đồng thời chỉnh khoảng cách giữa 2 ống này là 150mm.Lắp gioăng cao su vào 2 ốc trên thân sen rồi gắn vào 2 chân sen đã chuẩn bị xong ở bước 3 và siết chặt đai ốc. Gắn giá treo tay sen (chân cài sen tắm) vào tường tại độ cao thích hợp với nhu cầu gia đình. Cuối cùng, lắp 2 đầu của dây sen với bát sen và thân vòi hoa sen"
+    },
+    {
+      "id": 4,
+      "question": "Cách tự lắp đặt vòi sen tại nhà?",
+      "answer": "Trong các trường hợp cần thiết, bạn có thể tự tay thay thế vòi sen tại nhà mà không cần sự hỗ trợ từ thợ sửa chữa. Cùng Lofi Furniture tham khảo và làm theo các bước sau để tự thao tác lắp đặt vòi sen dễ dàng nhấtTháo vòi sen bị hỏng, hoặc nút chặn ra khỏi đầu chờ. Bạn nên lưu ý khóa hệ thống van nước trước khi thực hiện. Vệ sinh hệ thống đường cấp nước bằng cách mở nước chảy tự do trong 4 - 5 phút.Dùng băng tan cuốn chân sen (2 ống lệch tâm) rồi lắp vào 2 đầu chờ cấp nước đã có sẵn trên tường, siết chặt đồng thời chỉnh khoảng cách giữa 2 ống này là 150mm.Lắp gioăng cao su vào 2 ốc trên thân sen rồi gắn vào 2 chân sen đã chuẩn bị xong ở bước 3 và siết chặt đai ốc. Gắn giá treo tay sen (chân cài sen tắm) vào tường tại độ cao thích hợp với nhu cầu gia đình. Cuối cùng, lắp 2 đầu của dây sen với bát sen và thân vòi hoa sen"
+    }
+  ],
+  "store_branch": [
+    {
+      "id": 1,
+      "name": "Lofi Furniture Hà Nội",
+      "address": "Tầng 6 - 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình, Hà Nội",
+      "hotline": "(+84)398 454 346"
+    },
+    {
+      "id": 2,
+      "name": "Lofi Furniture Quảng Ngãi",
+      "address": "647 Quang Trung, Nguyễn Nghiêm, Thành phố Quảng Ngãi, tỉnh Quảng Ngãi",
+      "hotline": "(+84)398 454 346"
+    },
+    {
+      "id": 1,
+      "name": "Lofi Furniture Bình Thuận",
+      "address": "Bình Thuận",
+      "hotline": "(+84)398 454 346"
+    },
+    {
+      "id": 1,
+      "name": "Lofi Furniture Hồ Chí Minh",
+      "address": "Tầng 6 Landmark 81, đường Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, Hồ Chí Minh",
+      "hotline": "(+84)398 454 346"
+    }
+  ],
+  "favorite": [
+    {
+      "id": 1,
+      "idUser": 2,
+      "idProduct": 1
+    },
+    {
+      "id": 2,
+      "idUser": 2,
+      "idProduct": 3
+    },
+    {
+      "id": 3,
+      "idUser": 3,
+      "idProduct": 4
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "idUser": 2,
+      "idProduct": 1,
+      "count": 1
+    },
+    {
+      "id": 2,
+      "idUser": 2,
+      "idProduct": 2,
+      "count": 1
+    },
+    {
+      "id": 3,
+      "idUser": 3,
+      "idProduct": 2,
+      "count": 2
+    },
+    {
+      "id": 4,
+      "idUser": 3,
+      "idProduct": 4,
+      "count": 1
+    },
+    {
+      "id": 5,
+      "idUser": 3,
+      "idProduct": 1,
+      "count": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "order_date": "20/10/2024",
+      "idUser": 2,
+      "total_price": 200000000,
+      "status": "đang xử lý"
+    },
+    {
+      "id": 2,
+      "order_date": "20/10/2024",
+      "idUser": 1,
+      "total_price": 200000000,
+      "status": "đã giao"
+    },
+    {
+      "id": 3,
+      "order_date": "20/10/2024",
+      "idUser": 2,
+      "total_price": 200000000,
+      "status": "đang giao hàng"
+    },
+    {
+      "id": 4,
+      "order_date": "20/10/2024",
+      "idUser": 2,
+      "total_price": 200000000,
+      "status": "đã hủy"
+    }
+  ],
+  "order_detail": [
+    {
+      "id": 1,
+      "idOrder": 1,
+      "idProduct": 1,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "idOrder": 1,
+      "idProduct": 2,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "idOrder": 1,
+      "idProduct": 1,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "idOrder": 1,
+      "idProduct": 2,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "idOrder": 2,
+      "idProduct": 3,
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "idOrder": 2,
+      "idProduct": 4,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "idOrder": 2,
+      "idProduct": 5,
+      "quantity": 1
+    }
   ]
 }
