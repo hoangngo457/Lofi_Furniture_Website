@@ -44,7 +44,8 @@
       "value_discout": 0.2,
       "expiration_date": "10/10/2025",
       "condition": "đơn hàng giá trị tối thiểu 1.000.000đ",
-      "type": "discount"
+      "type": "discount",
+      "usage_limit": 10
     },
     {
       "id": 2,
@@ -52,7 +53,8 @@
       "value_discout": 0.1,
       "expiration_date": "10/10/2025",
       "condition": "đơn hàng giá trị tối thiểu 500.000đ",
-      "type": "discount"
+      "type": "discount",
+      "usage_limit": 100
     },
     {
       "id": 3,
@@ -60,7 +62,8 @@
       "value_discout": 50000,
       "expiration_date": "10/10/2025",
       "condition": "đơn hàng giá trị tối thiểu 500.000đ",
-      "type": "discount"
+      "type": "discount",
+      "usage_limit": ""
     },
     {
       "id": 4,
@@ -68,7 +71,8 @@
       "value_discout": 40000,
       "expiration_date": "10/10/2025",
       "condition": "đơn hàng giá trị tối thiểu 500.000đ",
-      "type": "freeship"
+      "type": "freeship",
+      "usage_limit": 100
     }
   ],
   "news-category": [
@@ -235,28 +239,48 @@
       "order_date": "20/10/2024",
       "idUser": 2,
       "total_price": 200000000,
-      "status": "đang xử lý"
+      "status": "đang xử lý",
+      "ship_date": "25/10/2024",
+      "ship_time": "08h00-12h00",
+      "invoice_company": true,
+      "payment_method": "bank",
+      "payment_status": "đang chờ thanh toán"
     },
     {
       "id": 2,
       "order_date": "20/10/2024",
       "idUser": 1,
       "total_price": 200000000,
-      "status": "đã giao"
+      "status": "đã giao",
+      "ship_date": "25/10/2024",
+      "ship_time": "08h00-12h00",
+      "invoice_company": false,
+      "payment_method": "cod",
+      "payment_status": ""
     },
     {
       "id": 3,
       "order_date": "20/10/2024",
       "idUser": 2,
       "total_price": 200000000,
-      "status": "đang giao hàng"
+      "status": "đang giao hàng",
+      "ship_date": "25/10/2024",
+      "ship_time": "08h00-12h00",
+      "invoice_company": false,
+      "payment_method": "bank",
+      "payment_status": "thanh toán thành công"
     },
     {
       "id": 4,
       "order_date": "20/10/2024",
       "idUser": 2,
       "total_price": 200000000,
-      "status": "đã hủy"
+      "status": "đã hủy",
+      "ship_date": "25/10/2024",
+      "ship_time": "08h00-12h00",
+      "invoice_company": true,
+      "payment_method": "cod",
+      "payment_status": ""
     }
   ],
   "order_detail": [
@@ -301,6 +325,349 @@
       "idOrder": 2,
       "idProduct": 5,
       "quantity": 1
+    }
+  ],
+  "invoice_company_info": [
+    {
+      "id": 1,
+      "company_name": "Công ty ABC",
+      "tax_code": "JFHUJ7457",
+      "company_address": "56 abv, HCM",
+      "email": "ctyabc@abc.com",
+      "idOrder": 1
+    },
+    {
+      "id": 2,
+      "company_name": "Công ty XYZ",
+      "tax_code": "JFHUJ7457",
+      "company_address": "56 adv, HCM",
+      "email": "ctyxyz@xyz.com",
+      "idOrder": 4
+    }
+  ],
+  "used_discount": [
+    {
+      "id": 1,
+      "idDiscount": 1,
+      "idOrder": 1
+    },
+    {
+      "id": 2,
+      "idDiscount": 3,
+      "idOrder": 1
+    },
+    {
+      "id": 3,
+      "idDiscount": 3,
+      "idOrder": 2
+    }
+  ],
+  "banner_slider": [
+    {
+      "id": 1,
+      "image": "",
+      "status": "enable"
+    },
+    {
+      "id": 2,
+      "image": "",
+      "status": "disable"
+    },
+    {
+      "id": 3,
+      "image": "",
+      "status": "enable"
+    }
+  ],
+  "about_us_image": [
+    {
+      "id": 1,
+      "image": "",
+      "status": "enable"
+    },
+    {
+      "id": 1,
+      "image": "",
+      "status": "disable"
+    }
+  ],
+  "build_bathroom": [
+    {
+      "id": 1,
+      "image": "",
+      "status": "enable"
+    },
+    {
+      "id": 1,
+      "image": "",
+      "status": "disable"
+    }
+  ],
+  "feedback_from_client_image": [
+    {
+      "id": 1,
+      "image": "",
+      "status": "enable"
+    },
+    {
+      "id": 1,
+      "image": "",
+      "status": "disable"
+    }
+  ],
+  "instagram_image": [
+    {
+      "id": 1,
+      "image": "",
+      "status": "enable"
+    },
+    {
+      "id": 1,
+      "image": "",
+      "status": "disable"
+    }
+  ],
+  "feedback": [
+    {
+      "id": 1,
+      "idUser": 2,
+      "idProduct": 1,
+      "content_feedback": "Sản phẩm này rất tốt"
+    }
+  ],
+  "feedback_image": [
+    {
+      "id": 1,
+      "image": "",
+      "idFeedback": 1
+    },
+    {
+      "id": 2,
+      "image": "",
+      "idFeedback": 1
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Bồn tắm"
+    },
+    {
+      "id": 2,
+      "name": "Bồn cầu"
+    },
+    {
+      "id": 3,
+      "name": "Sen tắm"
+    },
+    {
+      "id": 4,
+      "name": "Tủ chậu Lavabo"
+    },
+    {
+      "id": 5,
+      "name": "Vòi Lavabo"
+    },
+    {
+      "id": 6,
+      "name": "Phụ kiện"
+    }
+  ],
+  "child_category": [
+    {
+      "id": 1,
+      "name": "Bồn tắm đá",
+      "idCate": 1
+    },
+    {
+      "id": 2,
+      "name": "Bồn tắm ngâm",
+      "idCate": 1
+    },
+    {
+      "id": 3,
+      "name": "Bồn tắm massage",
+      "idCate": 1
+    },
+    {
+      "id": 4,
+      "name": "Bồn tắm massage âm sàn",
+      "idCate": 1
+    },
+    {
+      "id": 5,
+      "name": "Bồn cầu thông minh",
+      "idCate": 2
+    },
+    {
+      "id": 6,
+      "name": "Bồn cầu treo tường",
+      "idCate": 2
+    },
+    {
+      "id": 7,
+      "name": "Bồn cầu 1 khối",
+      "idCate": 2
+    },
+    {
+      "id": 8,
+      "name": "Bồn cầu không két nước",
+      "idCate": 2
+    },
+    {
+      "id": 9,
+      "name": "Sen tắm cây",
+      "idCate": 3
+    },
+    {
+      "id": 10,
+      "name": "Sen tắm âm tường",
+      "idCate": 3
+    },
+    {
+      "id": 11,
+      "name": "Sen tắm nhiệt độ",
+      "idCate": 3
+    },
+    {
+      "id": 12,
+      "name": "Bồn cầu không két nước",
+      "idCate": 2
+    }
+  ],
+  "product_type": [
+    {
+      "id": 1,
+      "name": "Cảm ứng"
+    },
+    {
+      "id": 2,
+      "name": "Treo tường"
+    },
+    {
+      "id": 3,
+      "name": "Tự động"
+    }
+  ],
+  "trademark": [
+    {
+      "id": 1,
+      "name": "Toto",
+      "origin": "Nhật Bản"
+    },
+    {
+      "id": 2,
+      "name": "Daelim",
+      "origin": "Hàn Quốc"
+    },
+    {
+      "id": 3,
+      "name": "Duravit",
+      "origin": "Đức"
+    },
+    {
+      "id": 4,
+      "name": "Moen",
+      "origin": "Mỹ"
+    },
+    {
+      "id": 5,
+      "name": "Grohe",
+      "origin": "Đức"
+    }
+  ],
+  "funiture_color": [
+    {
+      "id": 1,
+      "color": "white"
+    },
+    {
+      "id": 2,
+      "color": "black"
+    },
+    {
+      "id": 3,
+      "color": "grey"
+    },
+    {
+      "id": 4,
+      "color": "cowhide"
+    },
+    {
+      "id": 5,
+      "color": "blue"
+    }
+  ],
+  "material": [
+    {
+      "id": 1,
+      "name": "swood"
+    },
+    {
+      "id": 2,
+      "name": "stone"
+    },
+    {
+      "id": 3,
+      "name": "copper"
+    }
+  ],
+  "size": [
+    {
+      "id": 1,
+      "size": "150cm",
+      "idProduct": 1
+    },
+    {
+      "id": 2,
+      "size": "120cm",
+      "idProduct": 1
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "Tủ chậu lavabo phòng tắm kiêm máy giặt",
+      "price": 13500000,
+      "trademark": 1,
+      "quantity": 10,
+      "sold": 0,
+      "description": "",
+      "idCate": 4,
+      "idChild_Cate": ""
+    },
+    {
+      "id": 2,
+      "name": "Tủ chậu lavabo liền khối 2 tầng",
+      "price": 6500000,
+      "trademark": 1,
+      "quantity": 10,
+      "sold": 0,
+      "description": "",
+      "idCate": 4,
+      "idChild_Cate": ""
+    },
+    {
+      "id": 3,
+      "name": "Tủ chậu bo tròn kèm tủ gương thông minh",
+      "price": 10200000,
+      "trademark": 1,
+      "quantity": 10,
+      "sold": 0,
+      "description": "",
+      "idCate": 4,
+      "idChild_Cate": ""
+    },
+    {
+      "id": 4,
+      "name": "Bàn đá đôi chống xước, bề mặt bóng, chậu liền mép",
+      "price": 2750000,
+      "trademark": 1,
+      "quantity": 10,
+      "sold": 0,
+      "description": "",
+      "idCate": 4,
+      "idChild_Cate": ""
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "name": "fake-backend",
   "version": "1.0.0",
-  "description": "fake backend for series nextjs basic",
+  "description": "fake backend for clone web Lofi Furniture",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,7 @@
     "json",
     "server"
   ],
-  "author": "Hỏi Dân IT",
+  "author": "Xuân Hoàng",
   "license": "ISC",
   "dependencies": {
     "json-server": "0.17.3"
