@@ -242,31 +242,17 @@ input {
     height: 40px;
     width: 40px;
 }
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
+.password-container {
+    position: relative;
 }
 
-footer p {
-    margin: 10px 0;
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 15px
 }
 
-footer i {
-    color: red;
-}
 
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 768px) {

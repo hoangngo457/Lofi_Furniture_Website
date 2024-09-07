@@ -1,13 +1,23 @@
-'use client' // khi nào mà dùng sự kiện hay gì đó thì dùng nó để nó render 1 phần những giao diện thôi
-import { useRouter } from 'next/navigation'
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import logo from "/public/images/logo.png";
 import { blue } from '@mui/material/colors';
 import { red } from '@mui/material/colors';
-import { useState, useEffect } from 'react';
 import "@/styles/Login.css";
-import Link from 'next/link';
+import Image from 'next/image';
+
+
+
+
+
+
 const useWindowWidth = () => {
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
@@ -25,8 +35,15 @@ const useWindowWidth = () => {
 
     return windowWidth;
 };
+
 const Login = () => {
+    const router = useRouter()
     const windowWidth = useWindowWidth();
+    const [showPassword, setShowPassword] = useState(false);
+    const [showPasswordRegister, setShowPasswordRegister] = useState(false);
+   
+    const [showrePassword, setShowrePassword] = useState(false);
+
     useEffect(() => {
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
@@ -55,6 +72,10 @@ const Login = () => {
             }
         };
     }, []);
+     const handleForgotPass= () => {
+  
+    router.push("/ForgotPassword")
+  }
 
     return (
         <div>
@@ -64,39 +85,55 @@ const Login = () => {
                         <h1>Tạo tài khoản</h1>
                         <input type="text" placeholder="Họ và tên" />
                         <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Mật khẩu" />
-                         <input type="repassword" placeholder="Nhập lại mật khẩu" />
-                        <span className='name-or'>Hoặc</span>
-                         <div className="social-container">
-                            <a href="#" className="social"><i className=""></i><FacebookOutlinedIcon sx={{ color: blue[500] }}/></a>
-                            <a href="#" className="social"><i className="fab fa-twitter"></i><GitHubIcon /></a>
-                            <a href="#" className="social"><i className="fab fa-linkedin-in"></i><GoogleIcon sx={{ color: red[500] }}/></a>
+                        <div className="password-container">
+                        <input type={showPasswordRegister? "text" : "password"} placeholder="Mật khẩu" />
+                         <span onClick={() => setShowPasswordRegister(prev => !prev)} className="password-toggle">
+                                {showPasswordRegister ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                            </span>
+
                         </div>
-                        <button>Đăng ký</button>
+                        <div className="password-container">
+                        <input type={showrePassword ? "text" : "password"} placeholder="Nhập lại mật khẩu" />
+                         <span onClick={() => setShowrePassword(prev => !prev)} className="password-toggle">
+                                {showrePassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                            </span>
+
+                        </div>
+                       
+                        <span className='name-or'>Hoặc</span>
+                        <div className="social-container">
+                            <a href="#" className="social"><FacebookOutlinedIcon sx={{ color: blue[500] }} /></a>
+                            <a href="#" className="social"><GitHubIcon /></a>
+                            <a href="#" className="social"><GoogleIcon sx={{ color: red[500] }} /></a>
+                        </div>
+                        <button type='button'>Đăng ký </button>
                     </form>
                 </div>
                 <div className="form-container sign-in-container">
                     <form action="#">
+                        <div>
+                            <Image src={logo} alt="logo"  style={{ width: '100%', height: 'auto' }}/>
+                        </div>
+                        
                         <h1>Đăng nhập</h1>
-                        
-                       
                         <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Mật khẩu" />
-                        <div className='forgot-password'>Bạn quên mật khẩu?</div>
-                         <span className='name-or'>Hoặc</span>
-                         <div className="social-container">
-                        <a href="#" className="social"><i className=""></i><FacebookOutlinedIcon sx={{ color: blue[500] }}/></a>
-                            <a href="#" className="social"><i className="fab fa-twitter"></i><GitHubIcon /></a>
-                            <a href="#" className="social"><i className="fab fa-linkedin-in"></i><GoogleIcon sx={{ color: red[500] }}/></a>
+                        <div className="password-container">
+                            <input type={showPassword ? "text" : "password"} placeholder="Mật khẩu" />
+                            <span onClick={() => setShowPassword(prev => !prev)} className="password-toggle">
+                                {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                            </span>
                         </div>
-                        <button>Đăng nhập</button>
-
+                        <div className='forgot-password'onClick={()=>handleForgotPass()}>Bạn quên mật khẩu?</div>
+                        <span className='name-or'>Hoặc</span>
+                        <div className="social-container">
+                            <a href="#" className="social"><FacebookOutlinedIcon sx={{ color: blue[500] }} /></a>
+                            <a href="#" className="social"><GitHubIcon /></a>
+                            <a href="#" className="social"><GoogleIcon sx={{ color: red[500] }} /></a>
+                        </div>
+                        <button type='button'>Đăng nhập</button>
                         <div className="is-register" style={{ display: windowWidth < 768 ? 'block' : 'none' }}>
-                            Bạn chưa có tài khoản? <span ><a className='is-register-link' href="/Register">Đăng ký</a> </span>
-                            ngay!
-
+                            Bạn chưa có tài khoản? <span ><a className='is-register-link' href="/Register">Đăng ký</a> </span> ngay!
                         </div>
-                        
                     </form>
                 </div>
                 <div className="overlay-container">

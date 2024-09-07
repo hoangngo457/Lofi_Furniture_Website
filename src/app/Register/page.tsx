@@ -3,11 +3,15 @@ import { useRouter } from 'next/navigation'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { blue } from '@mui/material/colors';
 import { red } from '@mui/material/colors';
 import { useState, useEffect } from 'react';
 import "@/styles/Register.css";
-import Link from 'next/link';
+import logo from "/public/images/logo.png";
+import Image from 'next/image';
+
 const useWindowWidth = () => {
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
@@ -26,6 +30,10 @@ const useWindowWidth = () => {
     return windowWidth;
 };
 const Register = () => {
+      const [showPassword, setShowPassword] = useState(false);
+    const [showPasswordRegister, setShowPasswordRegister] = useState(false);
+   
+    const [showrePassword, setShowrePassword] = useState(false);
    
     const windowWidth = useWindowWidth();
     useEffect(() => {
@@ -65,15 +73,27 @@ const Register = () => {
                         <h1>Tạo tài khoản</h1>
                         <input type="text" placeholder="Họ và tên" />
                         <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Mật khẩu" />
-                         <input type="repassword" placeholder="Nhập lại mật khẩu" />
+                         <div className="password-container">
+                        <input type={showPasswordRegister? "text" : "password"} placeholder="Mật khẩu" />
+                         <span onClick={() => setShowPasswordRegister(prev => !prev)} className="password-toggle">
+                                {showPasswordRegister ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                            </span>
+
+                        </div>
+                        <div className="password-container">
+                        <input type={showrePassword ? "text" : "password"} placeholder="Nhập lại mật khẩu" />
+                         <span onClick={() => setShowrePassword(prev => !prev)} className="password-toggle">
+                                {showrePassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                            </span>
+
+                        </div>
                         <span className='name-or'>Hoặc</span>
                          <div className="social-container">
                             <a href="#" className="social"><i className=""></i><FacebookOutlinedIcon sx={{ color: blue[500] }}/></a>
                             <a href="#" className="social"><i className="fab fa-twitter"></i><GitHubIcon /></a>
                             <a href="#" className="social"><i className="fab fa-linkedin-in"></i><GoogleIcon sx={{ color: red[500] }}/></a>
                         </div>
-                        <button>Đăng ký</button>
+                        <button type='button'>Đăng ký</button>
                         <div className="is-register" style={{ display: windowWidth < 768 ? 'block' : 'none' }}>
                             Đã có tài khoản? <span ><a className='is-register-link' href="/Login">Đăng nhập</a> </span>
                             ngay!
@@ -83,11 +103,19 @@ const Register = () => {
                 </div>
                 <div className="form-container sign-in-container">
                     <form action="#">
+                        <div>
+                            <Image src={logo} alt="logo"  style={{ width: '100%', height: 'auto' }}/>
+                        </div>
                         <h1>Đăng nhập</h1>
                         
                        
                         <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Mật khẩu" />
+                          <div className="password-container">
+                            <input type={showPassword ? "text" : "password"} placeholder="Mật khẩu" />
+                            <span onClick={() => setShowPassword(prev => !prev)} className="password-toggle">
+                                {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                            </span>
+                        </div>
                         <div className='forgot-password'>Bạn quên mật khẩu?</div>
                          <span className='name-or'>Hoặc</span>
                          <div className="social-container">
@@ -95,7 +123,7 @@ const Register = () => {
                             <a href="#" className="social"><i className="fab fa-twitter"></i><GitHubIcon /></a>
                             <a href="#" className="social"><i className="fab fa-linkedin-in"></i><GoogleIcon sx={{ color: red[500] }}/></a>
                         </div>
-                        <button>Đăng nhập</button>
+                        <button type='button'>Đăng nhập</button>
 
                         
                         
