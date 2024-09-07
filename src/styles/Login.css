@@ -15,6 +15,10 @@ body {
 	margin: -20px 0 50px;
 }
 
+.name-or{
+	margin-top: 12px;
+	font-weight: bold;
+}
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -35,18 +39,26 @@ p {
 span {
 	font-size: 12px;
 }
-
+.forgot-password{
+	color: red;
+	font-size: 13px;
+	text-align: right;
+	display: block;
+	cursor: pointer;
+	
+}
 a {
-	color: #333;
-	font-size: 14px;
+	
+	font-size: 13px;
 	text-decoration: none;
 	margin: 15px 0;
+
 }
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #d94e28;
+	background-color: #d94e28;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -54,6 +66,7 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	cursor: pointer;
 }
 
 button:active {
@@ -72,7 +85,7 @@ button.ghost {
 form {
 	background-color: #FFFFFF;
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 50px;
@@ -122,6 +135,7 @@ input {
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
+	
 }
 
 .container.right-panel-active .sign-up-container {
@@ -227,40 +241,34 @@ input {
 	height: 40px;
 	width: 40px;
 }
+.password-container{
+	position: relative;
+}
+.password-toggle{
+	position: absolute;
+	right: 10px;
+	top:15px
 
-footer {
-	background-color: #222;
-	color: #fff;
-	font-size: 14px;
-	bottom: 0;
-	position: fixed;
-	left: 0;
-	right: 0;
-	text-align: center;
-	z-index: 999;
+
 }
 
-footer p {
-	margin: 10px 0;
-}
 
-footer i {
-	color: red;
-}
-
-footer a {
-	color: #3c97bf;
-	text-decoration: none;
-}
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 768px) {
 	.container {
 		width: 100%;
 		min-height: 600px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	
 	}
-	.sign-in-container,
-    .sign-up-container
+		  .sign-up-container{
+			display: none;
+		  }
+    .sign-in-container
 	 {
 		width: 100%;
 		position: static;
@@ -270,60 +278,33 @@ footer a {
 		opacity: 1;
 		/* Đảm bảo form không bị ẩn */
 		z-index: 1;
+		
 	}
 
 	.overlay-container {
-			position: absolute;
-				top: 50%;
-			
-				width: 100%;
-				height: 50%;
-				overflow: hidden;
-				transition: transform 0.6s ease-in-out;
-				z-index: 100;
-	}
-}
-
-@media (max-width: 500px) {
-	body {
-		margin: 0;
+			display: none;
 	}
 
-	.container {
-		box-shadow: none;
-		border-radius: 0;
-		min-height: 550px;
-	}
+	.is-register{
+		padding-top: 10px;
+		font-size: 13px;
+		display: block;
+			/* Hiển thị phần tử này trên màn hình nhỏ hơn 768px */
 
-	form {
-		padding: 0 20px;
 	}
+	.is-register-link {
+		color: red;
+		font-size: 14px;
+		cursor: pointer;
 
-	button {
-		padding: 12px 30px;
 	}
+		@media (min-width: 769px) {
+			.is-register {
+				display: none;
+				/* Ẩn phần tử này trên màn hình lớn hơn 768px */
+			}
+		}
+	
 
-	.social-container {
-		flex-direction: column;
-	}
-
-	.social-container a {
-		margin-bottom: 10px;
-		width: 30px;
-		height: 30px;
-	}
-}
-
-@media (max-width: 350px) {
-	form {
-		padding: 0 10px;
-	}
-
-	button {
-		padding: 10px 20px;
-	}
-
-	input {
-		padding: 10px;
-	}
+	
 }
