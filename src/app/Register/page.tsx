@@ -66,7 +66,7 @@ const Register = () => {
     }, []);
 
     return (
-        <div>
+        <div className='body-register'>
             <div className="container" id="container">
                 <div className="form-container sign-up-container">
                     <form action="#">

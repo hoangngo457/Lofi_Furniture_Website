@@ -10,7 +10,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import logo from "/public/images/logo.png";
 import { blue } from '@mui/material/colors';
 import { red } from '@mui/material/colors';
-import "@/styles/Login.css";
+import  "@/styles/Login.css";
 import Image from 'next/image';
 
 
@@ -78,10 +78,11 @@ const Login = () => {
   }
 
     return (
-        <div>
+        <div className='body-login'>
             <div className="container" id="container">
                 <div className="form-container sign-up-container">
-                    <form action="#">
+                    <form >
+
                         <h1>Tạo tài khoản</h1>
                         <input type="text" placeholder="Họ và tên" />
                         <input type="email" placeholder="Email" />
