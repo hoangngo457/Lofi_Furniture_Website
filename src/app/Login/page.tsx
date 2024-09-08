@@ -39,6 +39,7 @@ const useWindowWidth = () => {
 const Login = () => {
     const router = useRouter()
     const windowWidth = useWindowWidth();
+   
     const [showPassword, setShowPassword] = useState(false);
     const [showPasswordRegister, setShowPasswordRegister] = useState(false);
    
@@ -132,7 +133,7 @@ const Login = () => {
                             <a href="#" className="social"><GoogleIcon sx={{ color: red[500] }} /></a>
                         </div>
                         <button type='button'>Đăng nhập</button>
-                        <div className="is-register" style={{ display: windowWidth < 768 ? 'block' : 'none' }}>
+                        <div className="is-register" >
                             Bạn chưa có tài khoản? <span ><a className='is-register-link' href="/Register">Đăng ký</a> </span> ngay!
                         </div>
                     </form>

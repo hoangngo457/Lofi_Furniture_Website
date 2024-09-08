@@ -300,13 +300,14 @@ input {
 
     }
 
-    @media (min-width: 769px) {
-        .is-register {
-            display: none;
-            /* Ẩn phần tử này trên màn hình lớn hơn 768px */
-        }
-    }
+   
 
 
 
 }
+ @media (min-width: 769px) {
+     .is-register {
+         display: none;
+         /* Ẩn phần tử này trên màn hình lớn hơn 768px */
+     }
+ }

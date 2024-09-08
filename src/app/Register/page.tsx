@@ -94,7 +94,7 @@ const Register = () => {
                             <a href="#" className="social"><i className="fab fa-linkedin-in"></i><GoogleIcon sx={{ color: red[500] }}/></a>
                         </div>
                         <button type='button'>Đăng ký</button>
-                        <div className="is-register" style={{ display: windowWidth < 768 ? 'block' : 'none' }}>
+                        <div className="is-register" >
                             Đã có tài khoản? <span ><a className='is-register-link' href="/Login">Đăng nhập</a> </span>
                             ngay!
 
