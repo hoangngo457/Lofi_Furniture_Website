@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.0.2",
@@ -16,7 +17,9 @@
     "@types/react-select": "^5.0.1",
     "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "lodash": "^4.17.21",
+    "next-intl": "latest"
   },
   "devDependencies": {
     "@types/node": "^20",

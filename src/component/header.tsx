@@ -12,6 +12,10 @@ import Select, { SingleValue } from "react-select";
 import logo from "/public/images/logo.png";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
+import {Locale} from '../i18n/config';
+import {setUserLocale} from '../services/locale';
+
+
 interface OptionType {
   value: string;
   label: JSX.Element;
@@ -37,6 +41,7 @@ const options: OptionType[] = [
       </div>
     ),
   },
+
 ];
 const customStyles = {
   control: (provided: any) => ({
@@ -53,9 +58,14 @@ const HeaderLayout = () => {
     options[0]
   );
 
+
   // Chỉ định kiểu cho option
   const handleChange = (option: SingleValue<OptionType>) => {
     setSelectedOption(option);
+    const locale = option?.value as Locale;
+    if (option) {
+      setUserLocale(locale);  
+  }
   };
   return (
     <header>
