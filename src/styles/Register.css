@@ -46,8 +46,10 @@ span {
     font-size: 13px;
     text-align: right;
     display: block;
+    cursor: pointer;
 
 }
+
 
 a {
 
@@ -297,6 +299,7 @@ input {
     .is-register-link {
         color: red;
         font-size: 14px;
+        cursor: pointer;
 
     }
 

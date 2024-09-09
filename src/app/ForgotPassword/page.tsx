@@ -4,6 +4,7 @@ import logo from "/public/images/logo.png";
 import style from "@/styles/ForgotPassword.module.css";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import {useTranslations} from 'next-intl';
 
 const ForgotPassword = () => {
      const router = useRouter()
@@ -11,6 +12,7 @@ const ForgotPassword = () => {
   
     router.push("/Login")
   }
+   const t = useTranslations('ForgotPasswordPage');
     return (
         <div className={style["parent-container"]}>
             <div className={style["container-forgot-pass"]}>
@@ -23,10 +25,10 @@ const ForgotPassword = () => {
                             <Image src={logo} alt="logo" style={{ width: '100%', height: 'auto' }} />
                         </div>
                        
-                        <h1>Quên mật khẩu</h1>
-                        <input className={style['input-forgot-pass']} type="email" placeholder="Vui lòng nhập Email" />
-                        <button className={style['button-forgot-pass']} type='button'>Gửi</button>
-                        <a className={style["return-login"]} onClick={()=>handleReturn()}>Quay lại</a>
+                        <h1>{t('title-main')}</h1>
+                        <input className={style['input-forgot-pass']} type="email" placeholder={t('email')} />
+                        <button className={style['button-forgot-pass']} type='button'>{t('sent')}</button>
+                        <a className={style["return-login"]} onClick={()=>handleReturn()}>{t('return')}</a>
                         
                     </form>
                 </div>
