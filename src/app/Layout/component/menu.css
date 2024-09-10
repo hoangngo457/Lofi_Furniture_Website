@@ -1,0 +1,54 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  grid-template-columns: repeat(4, 1fr); /* Chia thành 4 cột */
+  grid-template-rows: auto; /* Tự động điều chỉnh chiều cao cho các hàng */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+  position: absolute;
+  top: 100%;
+  left: -200px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 85vw;
+  padding: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
+
+.product-category {
+  width: 100%; /* Đảm bảo phần tử chiếm toàn bộ không gian của cột */
+}
+
+.product-category p a {
+  color: #e25822;
+  font-size: 17px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.product-category ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.product-category ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.product-category ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+}
+.product-category ul li a:hover {
+  color: #e25822;
+  cursor: pointer;
+}

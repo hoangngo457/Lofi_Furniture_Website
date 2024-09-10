@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
+
 import { Container } from "@mui/material";
-import HeaderLayout from "@/component/header";
-import FooterLayout from "@/component/footer";
+
 import { NextIntlClientProvider } from "next-intl";
+import HeaderLayout from "./Layout/header";
+import FooterLayout from "./Layout/footer";
 import { getLocale, getMessages } from "next-intl/server";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["italic", "normal"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +32,10 @@ export default async function RootLayout({
       <body style={{ margin: "0", padding: "0" }}>
         <NextIntlClientProvider messages={messages}>
           <HeaderLayout />
+
           <div>{children}</div>
+
+    
           <FooterLayout />
         </NextIntlClientProvider>
       </body>
