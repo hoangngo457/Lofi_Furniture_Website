@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 
 import { Container } from "@mui/material";
-import HeaderLayout from "@/component/header";
-import FooterLayout from "@/component/footer";
+
+import { NextIntlClientProvider } from "next-intl";
+import HeaderLayout from "./Layout/header";
+import FooterLayout from "./Layout/footer";
+import { getLocale, getMessages } from "next-intl/server";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,7 +28,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang="vi">
+    <html lang={locale}>
       <body style={{ margin: "0", padding: "0" }}>
         <NextIntlClientProvider messages={messages}>
           <HeaderLayout />
