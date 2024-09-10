@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-body {
+.body-login {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -19,16 +19,14 @@ body {
 	margin-top: 12px;
 	font-weight: bold;
 }
-h1 {
+ h1 {
 	font-weight: bold;
 	margin: 0;
 }
 
-h2 {
-	text-align: center;
-}
 
-p {
+
+ p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
@@ -36,7 +34,7 @@ p {
 	margin: 20px 0 30px;
 }
 
-span {
+ span {
 	font-size: 12px;
 }
 .forgot-password{
@@ -47,7 +45,7 @@ span {
 	cursor: pointer;
 	
 }
-a {
+ a {
 	
 	font-size: 13px;
 	text-decoration: none;
@@ -55,7 +53,7 @@ a {
 
 }
 
-button {
+ button {
 	border-radius: 20px;
 	border: 1px solid #d94e28;
 	background-color: #d94e28;
@@ -69,15 +67,15 @@ button {
 	cursor: pointer;
 }
 
-button:active {
+ button:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+ button:focus {
 	outline: none;
 }
 
-button.ghost {
+ button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
@@ -93,7 +91,7 @@ form {
 	text-align: center;
 }
 
-input {
+ input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -298,13 +296,14 @@ input {
 		cursor: pointer;
 
 	}
-		@media (min-width: 769px) {
-			.is-register {
-				display: none;
-				/* Ẩn phần tử này trên màn hình lớn hơn 768px */
-			}
-		}
+		
 	
 
 	
+}
+@media (min-width: 768px) {
+	.is-register {
+		display: none;
+		/* Ẩn phần tử này trên màn hình lớn hơn 768px */
+	}
 }

@@ -19,6 +19,10 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuProductCategory from "./component/MenuCategory";
 import { useState } from "react";
 
+import {Locale} from '../i18n/config';
+import {setUserLocale} from '../services/locale';
+
+
 interface OptionType {
   value: string;
   label: JSX.Element;
@@ -44,6 +48,7 @@ const options: OptionType[] = [
       </div>
     ),
   },
+
 ];
 const customStyles = {
   control: (provided: any) => ({
@@ -61,9 +66,14 @@ const HeaderLayout = () => {
     options[0]
   );
 
+
   // Chỉ định kiểu cho option
   const handleChange = (option: SingleValue<OptionType>) => {
     setSelectedOption(option);
+    const locale = option?.value as Locale;
+    if (option) {
+      setUserLocale(locale);  
+  }
   };
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

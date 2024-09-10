@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body-register {
     background: #f6f5f7;
     display: flex;
     justify-content: center;
@@ -46,8 +46,10 @@ span {
     font-size: 13px;
     text-align: right;
     display: block;
+    cursor: pointer;
 
 }
+
 
 a {
 
@@ -297,16 +299,18 @@ input {
     .is-register-link {
         color: red;
         font-size: 14px;
+        cursor: pointer;
 
     }
 
-    @media (min-width: 769px) {
-        .is-register {
-            display: none;
-            /* Ẩn phần tử này trên màn hình lớn hơn 768px */
-        }
-    }
+   
 
 
 
 }
+ @media (min-width: 769px) {
+     .is-register {
+         display: none;
+         /* Ẩn phần tử này trên màn hình lớn hơn 768px */
+     }
+ }

@@ -10,8 +10,10 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import logo from "/public/images/logo.png";
 import { blue } from '@mui/material/colors';
 import { red } from '@mui/material/colors';
-import "@/styles/Login.css";
+import  "@/styles/Login.css";
 import Image from 'next/image';
+import {useTranslations} from 'next-intl';
+import Link from 'next/link'
 
 
 
@@ -39,6 +41,7 @@ const useWindowWidth = () => {
 const Login = () => {
     const router = useRouter()
     const windowWidth = useWindowWidth();
+   
     const [showPassword, setShowPassword] = useState(false);
     const [showPasswordRegister, setShowPasswordRegister] = useState(false);
    
@@ -77,36 +80,46 @@ const Login = () => {
     router.push("/ForgotPassword")
   }
 
+
+   const t = useTranslations('LoginPage');
+   const a = useTranslations('RegisterPage');
+
     return (
-        <div>
+        <div className='body-login'>
             <div className="container" id="container">
                 <div className="form-container sign-up-container">
-                    <form action="#">
-                        <h1>Tạo tài khoản</h1>
-                        <input type="text" placeholder="Họ và tên" />
+                    <form >
+
+                        <h1 >{a('create-account')}</h1>
+                        <input type="text" placeholder={a('user-name')} />
                         <input type="email" placeholder="Email" />
                         <div className="password-container">
-                        <input type={showPasswordRegister? "text" : "password"} placeholder="Mật khẩu" />
+                        <input type={showPasswordRegister? "text" : "password"} placeholder={a('password')} />
                          <span onClick={() => setShowPasswordRegister(prev => !prev)} className="password-toggle">
                                 {showPasswordRegister ? <VisibilityOffIcon /> : <VisibilityIcon />}
                             </span>
 
                         </div>
                         <div className="password-container">
-                        <input type={showrePassword ? "text" : "password"} placeholder="Nhập lại mật khẩu" />
+                        <input type={showrePassword ? "text" : "password"} placeholder={a('repassword')} />
                          <span onClick={() => setShowrePassword(prev => !prev)} className="password-toggle">
                                 {showrePassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
                             </span>
 
                         </div>
                        
-                        <span className='name-or'>Hoặc</span>
+                        <span className='name-or'>{a('or')}</span>
                         <div className="social-container">
                             <a href="#" className="social"><FacebookOutlinedIcon sx={{ color: blue[500] }} /></a>
                             <a href="#" className="social"><GitHubIcon /></a>
                             <a href="#" className="social"><GoogleIcon sx={{ color: red[500] }} /></a>
                         </div>
-                        <button type='button'>Đăng ký </button>
+                        <button type='button'>{a('title-register')}</button>
+                          <div className="is-register" >
+                            {a('yes-account')} <span ><Link className='is-register-link' href="/Login">{a('title-login')}</Link> </span>
+                            {a('now')}
+
+                        </div>
                     </form>
                 </div>
                 <div className="form-container sign-in-container">
@@ -115,38 +128,38 @@ const Login = () => {
                             <Image src={logo} alt="logo"  style={{ width: '100%', height: 'auto' }}/>
                         </div>
                         
-                        <h1>Đăng nhập</h1>
+                        <h1>{t('title-login')}</h1>
                         <input type="email" placeholder="Email" />
                         <div className="password-container">
-                            <input type={showPassword ? "text" : "password"} placeholder="Mật khẩu" />
+                            <input type={showPassword ? "text" : "password"} placeholder={t('password')} />
                             <span onClick={() => setShowPassword(prev => !prev)} className="password-toggle">
                                 {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
                             </span>
                         </div>
-                        <div className='forgot-password'onClick={()=>handleForgotPass()}>Bạn quên mật khẩu?</div>
-                        <span className='name-or'>Hoặc</span>
+                        <div className='forgot-password'onClick={()=>handleForgotPass()}>{t('text-forgot-pass')}</div>
+                        <span className='name-or'>{t('or')}</span>
                         <div className="social-container">
                             <a href="#" className="social"><FacebookOutlinedIcon sx={{ color: blue[500] }} /></a>
                             <a href="#" className="social"><GitHubIcon /></a>
                             <a href="#" className="social"><GoogleIcon sx={{ color: red[500] }} /></a>
                         </div>
-                        <button type='button'>Đăng nhập</button>
-                        <div className="is-register" style={{ display: windowWidth < 768 ? 'block' : 'none' }}>
-                            Bạn chưa có tài khoản? <span ><a className='is-register-link' href="/Register">Đăng ký</a> </span> ngay!
+                        <button type='button'>{t('title-login')}</button>
+                        <div className="is-register" >
+                            {t('no-account')} <span ><Link className='is-register-link' href="/Register">{t('title-register')}</Link> </span> {t('now')}
                         </div>
                     </form>
                 </div>
                 <div className="overlay-container">
                     <div className="overlay">
                         <div className="overlay-panel overlay-left">
-                            <h1>Chào mừng trở lại!</h1>
-                            <p>Để duy trì kết nối với chúng tôi vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
-                            <button className="ghost" id="signIn">Đăng nhập</button>
+                            <h1>{a('text-main-description')}</h1>
+                            <p>{a('description')}</p>
+                            <button className="ghost" id="signIn">{a('title-login')}</button>
                         </div>
                         <div className="overlay-panel overlay-right">
-                            <h1>Chào mừng đến với của hàng </h1>
-                            <p>Khám phá những món đồ nội thất sang trọng, hiện đại, và tinh tế, giúp biến không gian sống của bạn thành tổ ấm hoàn hảo.</p>
-                            <button className="ghost" id="signUp">Đăng ký</button>
+                            <h1>{t('text-main-description')}</h1>
+                            <p>{t('description')}</p>
+                            <button className="ghost" id="signUp">{t('title-register')}</button>
                         </div>
                     </div>
                 </div>

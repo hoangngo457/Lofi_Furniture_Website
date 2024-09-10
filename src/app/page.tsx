@@ -1,6 +1,21 @@
 import Link from 'next/link'
-export default function Home() {
+import {useTranslations} from 'next-intl';
+
+
+
+
+
+
+
+export default  function HomePage () {
+  const t = useTranslations('Test');
+ 
+
   return (
-  <Link href="/Login">Đăng nhập tại đây</Link>
+    <div>
+      
+    <h1>{t('title')}</h1>
+   <Link href="/Login">Đăng nhập tại đây</Link>
+    </div>
   );
 }
