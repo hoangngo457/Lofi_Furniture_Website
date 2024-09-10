@@ -16,6 +16,7 @@ export default  function HomePage () {
       
     <h1>{t('title')}</h1>
    <Link href="/Login">Đăng nhập tại đây</Link>
+   <Link href="/Contact">Liên hệ</Link>
     </div>
   );
 }

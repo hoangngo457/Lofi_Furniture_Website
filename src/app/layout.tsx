@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { Container } from "@mui/material";
 import HeaderLayout from "@/component/header";
 import FooterLayout from "@/component/footer";
-import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,9 +26,7 @@ export default async function RootLayout({
       <body style={{ margin: "0", padding: "0" }}>
         <NextIntlClientProvider messages={messages}>
           <HeaderLayout />
-          <Container>
-            {children}
-          </Container>
+          <div>{children}</div>
           <FooterLayout />
         </NextIntlClientProvider>
       </body>
