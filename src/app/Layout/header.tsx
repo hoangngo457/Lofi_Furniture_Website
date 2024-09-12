@@ -21,6 +21,9 @@ import { useState } from "react";
 
 import { Locale } from "@/i18n/config";
 import { setUserLocale } from "@/services/locale";
+import { menuItems } from "./component/menu_item";
+import "./component/menu.css";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 interface OptionType {
   value: string;
@@ -71,6 +74,10 @@ const HeaderLayout = () => {
     if (option) {
       setUserLocale(locale);
     }
+  };
+  const [activeItem, setActiveItem] = useState<string>("Trang chủ");
+  const handleItemClick = (label: string) => {
+    setActiveItem(label);
   };
 
   return (
@@ -158,27 +165,25 @@ const HeaderLayout = () => {
       <div className="nav-header">
         <div>
           <ul className="row-items">
-            <li className="active">
-              <Link href={"/"}>Trang chủ</Link>
-            </li>
-            <li>
-              <Link href={"#"}>Giới thiệu</Link>
-            </li>
-
-            <MenuProductCategory />
-
-            <li>
-              <Link href={"#"}>Tin tức</Link>
-            </li>
-            <li>
-              <Link href={"#"}>Liên hệ</Link>
-            </li>
-            <li>
-              <Link href={"#"}>Câu hỏi thường gặp</Link>
-            </li>
-            <li>
-              <Link href={"#"}>Hệ thống</Link>
-            </li>
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className={activeItem == item.label ? "active" : ""}
+                onClick={() => handleItemClick(item.label)}
+              >
+                {item.label === "Sản phẩm" ? (
+                  <div className="dropdown">
+                    <Link href="#">
+                      Sản phẩm
+                      <ArrowDropDownIcon />
+                    </Link>
+                    <MenuProductCategory />
+                  </div>
+                ) : (
+                  <Link href={item.path}>{item.label}</Link>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="hot-sales">

@@ -30,13 +30,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body style={{ margin: "0", padding: "0" }}>
+      <body style={{ margin: "0", padding: "0" }} className={roboto.className}>
         <NextIntlClientProvider messages={messages}>
           <HeaderLayout />
 
           <div>{children}</div>
 
-    
           <FooterLayout />
         </NextIntlClientProvider>
       </body>

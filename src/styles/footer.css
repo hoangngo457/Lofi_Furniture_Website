@@ -1,0 +1,116 @@
+.main-footer {
+  background-color: #1a1a1a;
+  padding: 10px 100px 20px 100px;
+  color: #fff;
+  font-size: 14;
+  display: flex;
+}
+.left-footer {
+  margin-right: 60px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.item a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.item p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.copy-right {
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14;
+  border-top: 1px solid #fff;
+}
+.right-footer {
+  display: inline-flex;
+}
+.col-footer {
+  margin: 0px 50px 0px 20px;
+}
+
+.col-footer {
+  display: grid;
+  padding-inline-start: 0px;
+  margin-block-start: 0px;
+}
+.col-footer ul {
+  padding-inline-start: 0px;
+  margin-block-start: 0px;
+}
+.col-footer li {
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+.col-footer li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 14;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+.col-footer li a:hover {
+  color: #d94e28;
+  cursor: pointer;
+}
+.list-module img {
+  margin: 3px;
+}
+.list-module ul {
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+}
+.list-module ul li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+}
+.icon-smallscreen {
+  display: none;
+}
+@media (max-width: 990px) {
+  .main-footer {
+    display: block;
+    padding: 10px 30px 10px 30px;
+  }
+  .right-footer {
+    padding: 0px;
+  }
+  .col-footer {
+    margin: 0px 50px 0px 0px;
+  }
+}
+@media (max-width: 766px) {
+  .main-footer {
+    padding: 10px 25px 10px 25px;
+  }
+  .right-footer {
+    display: block;
+  }
+  .col-footer {
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .icon-smallscreen {
+    display: flex;
+    position: absolute;
+    right: 0px;
+  }
+  .column-items {
+    display: none;
+  }
+}
