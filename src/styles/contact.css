@@ -1,0 +1,59 @@
+    .contact-bg {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+        /* Đảm bảo nền nằm phía sau các thành phần khác */
+        width: 100vw;
+        /* Đảm bảo nền bao phủ toàn bộ chiều rộng */
+        height: auto;
+        /* Điều chỉnh chiều cao tự động theo nội dung */
+    }
+    
+    .h1-contact {
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        /* Đặt lên trên hình ảnh */
+        top: 30%;
+        /* Điều chỉnh vị trí theo ý bạn */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        /* Đảm bảo nằm trên hình ảnh */
+        font-size: 30px;
+    }
+    
+    .breadcrumbs-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        /* Đặt lên trên hình ảnh */
+        top: 50%;
+        /* Điều chỉnh vị trí theo ý bạn */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        /* Đảm bảo nằm trên hình ảnh */
+    }
+    
+    .vippro {
+        border: 5px solid red;
+    }
+    
+    .ggmaps {
+        border: 5px solid blue;
+    }
+    
+    .ggmaps {
+        border: 5px solid green;
+        width: 620px;
+        height: 530.4px;
+    }
+    
+    .box .information-contact {
+        border: 5px solid green;
+    }

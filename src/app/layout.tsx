@@ -33,7 +33,10 @@ export default async function RootLayout({
       <body style={{ margin: "0", padding: "0" }}>
         <NextIntlClientProvider messages={messages}>
           <HeaderLayout />
-          <Container>{children}</Container>
+
+          <div>{children}</div>
+
+    
           <FooterLayout />
         </NextIntlClientProvider>
       </body>
