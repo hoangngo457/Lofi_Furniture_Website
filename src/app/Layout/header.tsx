@@ -85,11 +85,11 @@ const HeaderLayout = () => {
         <div className="left-side">
           <span className="text-center">
             <CallIcon fontSize="medium" sx={{ color: "#d94e28" }} />
-            <a href="#">1900 6750</a>
+            <a href="tel:0399121048"> 0399121048</a>
           </span>
           <span className="text-center" style={{ marginLeft: 10 }}>
             <EmailIcon fontSize="medium" sx={{ color: "#d94e28" }} />
-            <a href="#">support@lofiFnt.vn</a>
+            <a href="mailto:nhoxtuananh092@gmail.com"> support@lofi.vn</a>
           </span>
         </div>
         <div className="right-side">

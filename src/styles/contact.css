@@ -1,59 +1,57 @@
-    .contact-bg {
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 0;
-        /* Đảm bảo nền nằm phía sau các thành phần khác */
-        width: 100vw;
-        /* Đảm bảo nền bao phủ toàn bộ chiều rộng */
-        height: auto;
-        /* Điều chỉnh chiều cao tự động theo nội dung */
-    }
-    
-    .h1-contact {
-        color: white;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        /* Đặt lên trên hình ảnh */
-        top: 30%;
-        /* Điều chỉnh vị trí theo ý bạn */
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        /* Đảm bảo nằm trên hình ảnh */
-        font-size: 30px;
-    }
-    
-    .breadcrumbs-contact {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        /* Đặt lên trên hình ảnh */
-        top: 50%;
-        /* Điều chỉnh vị trí theo ý bạn */
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        /* Đảm bảo nằm trên hình ảnh */
-    }
-    
-    .vippro {
-        border: 5px solid red;
-    }
-    
-    .ggmaps {
-        border: 5px solid blue;
-    }
-    
-    .ggmaps {
-        border: 5px solid green;
-        width: 620px;
-        height: 530.4px;
-    }
-    
-    .box .information-contact {
-        border: 5px solid green;
-    }
+.contact-under {
+    padding: 10px;
+}
+
+.contact-lh a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.contact-lh a:hover {
+    color: #d94e28;
+}
+
+.btn-lienhe {
+    background-color: #d94e28;
+    color: #fff;
+    border: initial;
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-lienhe .btn-lienhe:hover {
+    color: rgb(197, 193, 193);
+}
+
+.box-ggmaps {
+    text-align: right;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 80%;
+    /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.form-input-contact .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    /* nếu bạn muốn loại bỏ cả hiệu ứng shadow */
+}
