@@ -6,7 +6,8 @@ import Image from "next/image";
 import logo from "/public/images/vip.jpg";
 
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import stylecontact from "@/styles/contact.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import  "@/styles/contact.css";
 import { colors } from "@mui/material";
 
 const Contact = () => {
@@ -26,8 +27,8 @@ const Contact = () => {
   ];
 
   return (
-    <div className="body-contact">
-      <div className={stylecontact["contact-bg"]}>
+    <div >
+      <div className="contact-bg">
         <Image
           src={logo}
           alt="logo"
@@ -38,8 +39,8 @@ const Contact = () => {
           }}
         />
 
-        <h1 className={stylecontact["h1-contact"]}>Liên hệ</h1>
-        <div className={stylecontact["breadcrumbs-contact"]}>
+        <h1 className="h1-contact">Liên hệ</h1>
+        <div className="breadcrumbs-contact">
           <Breadcrumbs
             separator={
               <NavigateNextIcon fontSize="small" sx={{ color: "white" }} />
@@ -50,18 +51,33 @@ const Contact = () => {
         </div>
       </div>
 
+        <div className="row">
+          <div className="col-6 ggmaps">
+            <div className="box-ggmaps">
+              hello
+            </div>
+            </div>
+          <div className="col-6 information-contact">
+            <div className=""></div>
 
-      <div className="container">
-  <div className="row">
-    <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
-    <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
 
-    <div className="w-100"></div>
 
-    <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
-    <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
-  </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+     
     </div>
   );
 };

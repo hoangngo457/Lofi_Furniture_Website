@@ -39,3 +39,21 @@
         z-index: 1;
         /* Đảm bảo nằm trên hình ảnh */
     }
+    
+    .vippro {
+        border: 5px solid red;
+    }
+    
+    .ggmaps {
+        border: 5px solid blue;
+    }
+    
+    .ggmaps {
+        border: 5px solid green;
+        width: 620px;
+        height: 530.4px;
+    }
+    
+    .box .information-contact {
+        border: 5px solid green;
+    }
