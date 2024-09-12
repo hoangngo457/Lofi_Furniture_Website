@@ -1,9 +1,8 @@
-import "@/app/Layout/component/menu.css";
 import Link from "next/link";
 const page = () => {
   return (
-    <div className="dropdown-content">
-      <div className="product-category">
+    <div>
+      <div>
         <p>
           <Link href="#">Bồn tắm</Link>
         </p>

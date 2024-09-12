@@ -15,7 +15,7 @@ import favorite from "/public/images/favorite.png";
 import shopping_cart from "/public/images/shopping-cart.png";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import Link from "next/link";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 import MenuProductCategory from "./component/MenuCategory";
 import { useState } from "react";
 
@@ -73,12 +73,6 @@ const HeaderLayout = () => {
     }
   };
 
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
-  const handleMouseLeave = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <header>
       <div className="top-header">
@@ -112,11 +106,13 @@ const HeaderLayout = () => {
       </div>
       <div className="header-area">
         <div style={{ width: "22.5%" }}>
-          <Image
-            src={logo}
-            alt="logo website"
-            style={{ width: "100%", height: "auto" }}
-          />
+          <Link href={"/"}>
+            <Image
+              src={logo}
+              alt="logo website"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Link>
         </div>
         <form className="search-secsion">
           <input type="text" />
@@ -163,7 +159,7 @@ const HeaderLayout = () => {
         <div>
           <ul className="row-items">
             <li className="active">
-              <Link href={"#"}>Trang chủ</Link>
+              <Link href={"/"}>Trang chủ</Link>
             </li>
             <li>
               <Link href={"#"}>Giới thiệu</Link>

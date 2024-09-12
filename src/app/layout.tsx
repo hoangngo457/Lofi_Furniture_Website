@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import HeaderLayout from "./Layout/header";
 import FooterLayout from "./Layout/footer";
 import { getLocale, getMessages } from "next-intl/server";
+import "@/styles/layout.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
