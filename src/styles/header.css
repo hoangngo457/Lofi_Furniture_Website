@@ -214,7 +214,7 @@
     width: 48%;
   }
   .header-control {
-    width: 50%;
+    flex-grow: 1;
     display: flex;
     justify-content: end;
   }
