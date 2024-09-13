@@ -18,11 +18,21 @@ const Breadcrumb_Layout = () => {
       key="1"
       color="white"
       href="/"
-      sx={{ fontWeight: "bold" }}
+      sx={{
+        fontWeight: "bold",
+        fontSize: { xs: "3.5vw", sm: "2vw", md: "1.5vw", lg: "1vw" }, // Responsive font-size
+      }}
     >
       Trang chủ
     </Link>,
-    <Typography key="2" sx={{ color: "white", fontWeight: "bold" }}>
+    <Typography
+      key="2"
+      sx={{
+        color: "white",
+        fontWeight: "bold",
+        fontSize: { xs: "3.5vw", sm: "2vw", md: "1.5vw", lg: "1vw" }, // Responsive font-size
+      }}
+    >
       {label}
     </Typography>,
   ];
@@ -35,7 +45,13 @@ const Breadcrumb_Layout = () => {
         <div className="breadcrumbs-contact">
           <Breadcrumbs
             separator={
-              <NavigateNextIcon fontSize="small" sx={{ color: "white" }} />
+              <NavigateNextIcon
+                fontSize="small"
+                sx={{
+                  color: "white",
+                  fontSize: { xs: "4vw", sm: "2vw", md: "1vw", lg: "1vw" },
+                }}
+              />
             }
           >
             {breadcrumbs}

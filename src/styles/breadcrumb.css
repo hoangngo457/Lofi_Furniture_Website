@@ -23,7 +23,9 @@
     transform: translate(-50%, -50%);
     color: white;
     /* Responsive font size */
+    font-size: 1vw;
     text-align: center;
+    font-size: 10vw;
     /* Optional: Add background for better visibility */
     padding: 10px;
     /* Include padding and border in element's total width and height */
@@ -32,7 +34,7 @@
 .breadcrumbs-contact {
     position: absolute;
     top: 65%;
-    left: 50%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
     color: white;
     /* Responsive font size */
@@ -42,7 +44,7 @@
     /* Include padding and border in element's total width and height */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
     .contact-bg img {
         display: block;
         width: 100vw;
@@ -52,8 +54,26 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 376px) {
     .breadcrumbs-contact {
-        left: 46.9%;
+        left: 48%;
+    }
+}
+
+@media (min-width: 375px) {
+    .h1-contact {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width: 700px) {
+    .h1-contact {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .h1-contact {
+        font-size: 2vw;
     }
 }
