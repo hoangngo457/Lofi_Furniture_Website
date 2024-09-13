@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
 
-import { Container } from "@mui/material";
-
 import { NextIntlClientProvider } from "next-intl";
 import HeaderLayout from "./Layout/header";
 import FooterLayout from "./Layout/footer";
@@ -30,7 +28,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body style={{ margin: "0", padding: "0" }} className={roboto.className}>
+      <body className={roboto.className}>
         <NextIntlClientProvider messages={messages}>
           <HeaderLayout />
 

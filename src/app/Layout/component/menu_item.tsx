@@ -3,7 +3,7 @@ export const menuItems = [
   { label: "Giới thiệu", path: "/" },
   { label: "Sản phẩm", path: "/" },
   { label: "Tin tức", path: "/" },
-  { label: "Liên hệ", path: "/" },
+  { label: "Liên hệ", path: "/Contact" },
   { label: "Câu hỏi thường gặp", path: "/" },
   { label: "Hệ thống", path: "/" },
 ];
