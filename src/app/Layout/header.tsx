@@ -192,7 +192,11 @@ const HeaderLayout = () => {
                     <MenuProductCategory />
                   </div>
                 ) : (
-                  <Link href={item.path}>{item.label}</Link>
+                  <Link
+                    href={{ pathname: item.path, query: { label: item.label } }}
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </li>
             ))}

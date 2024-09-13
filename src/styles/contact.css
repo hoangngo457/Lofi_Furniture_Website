@@ -1,57 +1,57 @@
 .contact-under {
-  padding: 20px 10px 50px 10px;
+    padding: 20px 0px 50px 0px;
 }
 
 .contact-lh a {
-  text-decoration: none;
-  color: #000;
-  margin-left: 5px;
-  cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .contact-lh a:hover {
-  color: #d94e28;
+    color: #d94e28;
 }
 
 .btn-lienhe {
-  background-color: #d94e28;
-  color: #fff;
-  border: initial;
-  padding: 0 20px;
-  height: 35px;
-  line-height: 35px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #d94e28;
+    color: #fff;
+    border: initial;
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .button-lienhe .btn-lienhe:hover {
-  color: rgb(197, 193, 193);
+    color: rgb(197, 193, 193);
 }
 
 .box-ggmaps {
-  text-align: right;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 80%;
-  /* 16:9 Aspect Ratio */
+    border: 2px solid red;
+    text-align: right;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 110%;
+    /* 16:9 Aspect Ratio */
 }
 
 .responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .form-input-contact .form-control:focus {
-  outline: none;
-  box-shadow: none;
-  /* nếu bạn muốn loại bỏ cả hiệu ứng shadow */
+    outline: none;
+    box-shadow: none;
 }
