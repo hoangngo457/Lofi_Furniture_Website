@@ -11,13 +11,13 @@ const Breadcrumb_Layout = () => {
         key="1"
         color="white"
         href="/"
-        sx={{ fontWeight: "bold", fontSize: "1.5vw" }}
+        sx={{ fontWeight: "bold", }}
       >
         Trang chủ
       </Link>,
       <Typography
         key="2"
-        sx={{ color: "white", fontWeight: "bold", fontSize: "1.5vw" }}
+        sx={{ color: "white", fontWeight: "bold",  }}
       >
         Liên hệ
       </Typography>,
@@ -32,7 +32,7 @@ const Breadcrumb_Layout = () => {
             separator={
               <NavigateNextIcon
                 fontSize="small"
-                sx={{ color: "white", fontSize: "1.5vw" }}
+                sx={{ color: "white" }}
               />
             }
           >

@@ -23,7 +23,6 @@
             transform: translate(-50%, -50%);
             color: white;
             /* Responsive font size */
-            font-size: 3vw;
             text-align: center;
             /* Optional: Add background for better visibility */
             padding: 10px;
@@ -41,4 +40,20 @@
             /* Optional: Add background for better visibility */
             padding: 10px;
             /* Include padding and border in element's total width and height */
+        }
+        
+        @media screen and (max-width: 600px) {
+            .contact-bg img {
+                display: block;
+                width: 100vw;
+                height: 30vh;
+                object-fit: cover;
+                /* Giúp hình ảnh phủ toàn bộ mà không bị méo */
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .breadcrumbs-contact {
+                left: 46.9%;
+            }
         }
