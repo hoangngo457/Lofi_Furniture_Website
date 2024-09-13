@@ -1,5 +1,6 @@
 import { Container } from "@mui/material"
-import Breadcrumb_Layout from "../Layout/component/Breadcrumb_Layout";
+import Breadcrumb_Layout from "../components/Breadcrumb_Layout";
+
 
 const Introduce =()=>{
     return (
