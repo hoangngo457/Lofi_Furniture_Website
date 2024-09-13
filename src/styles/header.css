@@ -3,7 +3,7 @@
   background-color: white;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px 50px 5px 50px;
+  padding: 5px 100px 5px 100px;
   position: relative;
 }
 .left-side {
@@ -39,9 +39,12 @@
 }
 .header-area {
   background-color: #f5f5f5;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 100px 20px 100px;
   display: flex;
   align-items: center;
+}
+.logo {
+  width: "22.5%";
 }
 .search-secsion {
   background-color: #fff;
@@ -112,16 +115,20 @@
   right: 10px;
 }
 .nav-header {
-  /* margin: 10px; */
+  margin: 10px 100px 10px 100px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.row-items {
-  display: inline-flex;
+.nav-left {
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+.row-items {
+  display: inline-flex;
+  margin: 0px;
 }
 .row-items li {
   margin-right: 30px;
@@ -170,8 +177,17 @@
   .hot-sales {
     margin-right: 0;
   }
+
+  .nav-header {
+    margin: 10px 70px 10px 70px;
+  }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1060px) {
+  .logo {
+    width: 20%;
+  }
+}
+@media (max-width: 1050px) {
   .nav-header {
     display: none;
   }
@@ -180,14 +196,38 @@
     padding-inline: 0px;
     background-color: transparent;
   }
+  .header-icon {
+    padding: 0px 5px 0px 5px;
+  }
   .header-icon span {
     display: none;
   }
   .account {
     display: none;
   }
+
+  .header-area {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 48%;
+  }
+  .header-control {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+  }
+  .search-secsion {
+    order: 1;
+    width: 100%;
+    margin: 15px 0px 0px 0px;
+  }
+  .quantity-node {
+    right: 0px;
+  }
 }
-@media (max-width: 750px) {
+@media (max-width: 766px) {
   .left-side {
     display: none;
   }
@@ -195,13 +235,19 @@
     width: 100%;
     justify-content: space-between;
   }
-
-  /* .icon-menu {
-    display: flex;
-    padding-inline: 0px;
-    background-color: transparent;
+}
+@media (max-width: 750px) {
+  .top-header {
+    width: 100%;
+    padding: 5px 10px 5px 10px;
   }
-  .nav-header {
-    display: none;
-  } */
+  .header-area {
+    padding: 5px 10px 5px 10px;
+  }
+  .logo {
+    width: 47%;
+  }
+  .icon-menu {
+    margin: 0px;
+  }
 }

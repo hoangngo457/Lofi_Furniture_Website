@@ -26,6 +26,7 @@ import "./component/menu.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Button from "@mui/material/Button";
+import { Container } from "@mui/material";
 
 interface OptionType {
   value: string;
@@ -122,7 +123,7 @@ const HeaderLayout = () => {
         </div>
       </div>
       <div className="header-area">
-        <div style={{ width: "22.5%" }}>
+        <div className="logo">
           <Link href={"/"}>
             <Image
               src={logo}
@@ -167,13 +168,14 @@ const HeaderLayout = () => {
             onClick={handleClick}
             className="icon-menu"
             disableRipple
+            sx={{ margin: "0px", padding: "0px", minWidth: "0px" }}
           >
             <MenuRoundedIcon fontSize="large" sx={{ color: "#e53200" }} />
           </Button>
         </div>
       </div>
       <div className="nav-header">
-        <div>
+        <div className="nav-left">
           <ul className="row-items">
             {menuItems.map((item, index) => (
               <li
