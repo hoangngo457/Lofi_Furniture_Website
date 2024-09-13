@@ -24,6 +24,8 @@ import { setUserLocale } from "@/services/locale";
 import { menuItems } from "./component/menu_item";
 import "./component/menu.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import Button from "@mui/material/Button";
 
 interface OptionType {
   value: string;
@@ -79,6 +81,14 @@ const HeaderLayout = () => {
   const handleItemClick = (label: string) => {
     setActiveItem(label);
   };
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <header>
@@ -128,25 +138,14 @@ const HeaderLayout = () => {
           </div>
         </form>
         <div className="header-control">
-          <Link href={"#"} className="header-icon">
-            <Image
-              src={account}
-              alt="account"
-              height={26}
-              width={26}
-              style={{ padding: "10px" }}
-            />
-            Tài khoản
+          <Link href={"#"} className="header-icon account">
+            <Image src={account} alt="account" height={26} width={26} />
+            <span>Tài khoản</span>
           </Link>
           <Link href={"/favorite"} className="header-icon">
-            <Image
-              src={favorite}
-              alt="favorite"
-              height={26}
-              width={26}
-              style={{ margin: "10px" }}
-            />
-            Yêu thích
+            <Image src={favorite} alt="favorite" height={26} width={26} />
+            <span>Yêu thích</span>
+
             <div className="quantity-node">0</div>
           </Link>
           <Link href={"#"} className="header-icon">
@@ -155,11 +154,22 @@ const HeaderLayout = () => {
               alt="shopping cart"
               height={26}
               width={26}
-              style={{ padding: "10px" }}
             />
-            Giỏ hàng
+            <span>Giỏ hàng</span>
+
             <div className="quantity-node">0</div>
           </Link>
+          <Button
+            id="demo-positioned-button"
+            aria-controls={open ? "demo-positioned-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            className="icon-menu"
+            disableRipple
+          >
+            <MenuRoundedIcon fontSize="large" sx={{ color: "#e53200" }} />
+          </Button>
         </div>
       </div>
       <div className="nav-header">
