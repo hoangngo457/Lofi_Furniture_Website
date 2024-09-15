@@ -37,7 +37,35 @@
         "sent": "Gửi",
         "return": "Quay lại"
 
+    },
+
+    "ContactPage": {
+        "title-contact": "Cửa hàng nội thất Lofi Furniture",
+        "location": "Địa chỉ",
+        "phone": "Điện thoại",
+        "title-contact2": "Liên hệ với chúng tôi",
+        "content": "Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể .",
+        "name": "Họ và tên",
+        "phone2": "Điện thoại*",
+        "content2": "Nội dung",
+        "send": "Gửi thông tin"
+    },
+
+    "menuItems": {
+        "home": "Trang chủ",
+        "introduce": "Giới thiệu",
+        "products": "Sản phẩm",
+        "news": "Tin tức",
+        "contact": "Liên hệ",
+        "faq": "Câu hỏi thường gặp",
+        "system": "Hệ thống"
+    },
+    "breadcrumb": {
+        "home": "Trang chủ"
+
     }
+
+
 
 
 }

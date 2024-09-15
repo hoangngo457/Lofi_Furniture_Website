@@ -1,44 +1,75 @@
 {
 
-  "Test": {
-    "title": "Đây là tiếng anh"
-  },
+    "Test": {
+        "title": "Đây là tiếng anh"
+    },
 
-  "LoginPage": {
-      "title-login": "Login",
-      "password": "Password",
-      "text-forgot-pass": "Forgot your password",
-      "or": "Or",
-      "text-main-description": "Welcome to the store",
-      "description": "Explore luxurious, modern, and sophisticated furniture pieces that help transform your living space into the perfect home.",
-      "title-register": "Register",
-      "no-account": "Don't have an account?",
-      "now": "now!"
+    "LoginPage": {
+        "title-login": "Login",
+        "password": "Password",
+        "text-forgot-pass": "Forgot your password",
+        "or": "Or",
+        "text-main-description": "Welcome to the store",
+        "description": "Explore luxurious, modern, and sophisticated furniture pieces that help transform your living space into the perfect home.",
+        "title-register": "Register",
+        "no-account": "Don't have an account?",
+        "now": "now!"
 
-      
-  },
-  "RegisterPage": {
-    "create-account": "Create Account",
-    "user-name": "Full Name",
-    "password": "Password",
-    "repassword": "Confirm Password",
-    "text-forgot-pass": "Forgot your password",
-    "or": "Or",
-    "text-main-description": "Welcome back!",
-    "description": "To stay connected with us, please log in with your personal information",
-    "title-register": "Register",
-    "title-login": "Login",
-    "no-account": "Don't have an account?",
-    "now": "now!",
-    "yes-account": "Already have an account?"
-},
 
-"ForgotPasswordPage": {
-  "title-main": "Forgot Password",
-  "email": "Please enter your email",
-  "sent": "Send",
-  "return": "Return"
-}
+    },
+    "RegisterPage": {
+        "create-account": "Create Account",
+        "user-name": "Full Name",
+        "password": "Password",
+        "repassword": "Confirm Password",
+        "text-forgot-pass": "Forgot your password",
+        "or": "Or",
+        "text-main-description": "Welcome back!",
+        "description": "To stay connected with us, please log in with your personal information",
+        "title-register": "Register",
+        "title-login": "Login",
+        "no-account": "Don't have an account?",
+        "now": "now!",
+        "yes-account": "Already have an account?"
+    },
+
+    "ForgotPasswordPage": {
+        "title-main": "Forgot Password",
+        "email": "Please enter your email",
+        "sent": "Send",
+        "return": "Return"
+    },
+
+    "ContactPage": {
+        "title-contact": "Lofi Furniture Store",
+        "location": "Address",
+        "phone": "Phone",
+        "title-contact2": "Contact Us",
+        "content": "If you have any questions, feel free to send us a request, and we will get back to you as soon as possible.",
+        "name": "Full Name",
+        "phone2": "Phone*",
+        "content2": "Message",
+        "send": "Send Information"
+    },
+
+
+    "menuItems": {
+        "home": "Home",
+        "introduce": "Introduce",
+        "products": "Products",
+        "news": "News",
+        "contact": "Contact",
+        "faq": "FAQ",
+        "system": "System"
+    },
+    "breadcrumb": {
+        "home": "Home"
+
+    }
+
+
+
+
 
 
 

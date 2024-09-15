@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/contact.css";
@@ -6,8 +7,11 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Breadcrumb_Layout from "../components/Breadcrumb_Layout";
 import { Container } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const contact = useTranslations("ContactPage");
+
   return (
     <div>
       <Breadcrumb_Layout />
@@ -25,9 +29,7 @@ const Contact = () => {
           </div>
           <div className="col-sm-6 information-contact">
             <div className="contact-box1">
-              <h4 className="h4-title1 pb-2">
-                Cửa hàng nội thất Lofi Furniture
-              </h4>
+              <h4 className="h4-title1 pb-2">{contact("title-contact")}</h4>
               <div className="col-sm pb-2">
                 <div>
                   <b>
@@ -38,7 +40,7 @@ const Contact = () => {
                         paddingBottom: 0.9,
                       }}
                     />
-                    Địa chỉ:
+                    {contact("location")}:
                   </b>
                   <span> 266 Đội Cấn, P. Liễu Giai, Q. Ba Đình, TP Hà Nội</span>
                 </div>
@@ -61,23 +63,20 @@ const Contact = () => {
                       paddingBottom: 0.9,
                     }}
                   />
-                  <b>Hotline:</b>
+                  <b>{contact("phone")}:</b>
                   <a href="tel:0399121048"> 0399121048</a>
                 </div>
               </div>
 
-              <h4 className="h4-title2 pb-2">Liên hệ với chúng tôi</h4>
+              <h4 className="h4-title2 pb-2">{contact("title-contact2")}</h4>
               <div className="col-sm">
-                <div className="pb-2">
-                  Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và
-                  chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể .
-                </div>
+                <div className="pb-2">{contact("content")}</div>
 
                 <div className="form-input-contact mb-3">
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Họ và tên"
+                    placeholder={contact("name")}
                   />
                 </div>
                 <div className="mb-3 form-input-contact">
@@ -91,20 +90,20 @@ const Contact = () => {
                   <input
                     type="phone"
                     className="form-control"
-                    placeholder="Điện thoại*"
+                    placeholder={contact("phone2")}
                   />
                 </div>
                 <div className="mb-3 form-input-contact">
                   <textarea
                     className="form-control"
-                    placeholder="Nội dung"
+                    placeholder={contact("content2")}
                     rows={5}
                   ></textarea>
                 </div>
 
                 <div className="button-lienhe">
                   <button className="btn-lienhe" type="submit">
-                    Gửi thông tin
+                    {contact("send")}
                   </button>
                 </div>
               </div>

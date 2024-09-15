@@ -27,6 +27,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 interface OptionType {
   value: string;
@@ -90,6 +91,18 @@ const HeaderLayout = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const itemmenu = useTranslations("menuItems");
+
+  const mangvip = [
+    { label: itemmenu("home") || "Default Home", path: "/" },
+    { label: itemmenu("introduce") || "Default Introduce", path: "/Introduce" },
+    { label: itemmenu("products") || "Default Products", path: "/Products" },
+    { label: itemmenu("news") || "Default News", path: "/News" },
+    { label: itemmenu("contact") || "Default Contact", path: "/Contact" },
+    { label: itemmenu("faq") || "Default FAQ", path: "/Question" },
+    { label: itemmenu("system") || "Default System", path: "/System" },
+  ];
 
   return (
     <header>
@@ -177,7 +190,7 @@ const HeaderLayout = () => {
       <div className="nav-header">
         <div className="nav-left">
           <ul className="row-items">
-            {menuItems.map((item, index) => (
+            {mangvip.map((item, index) => (
               <li
                 key={index}
                 className={activeItem == item.label ? "active" : ""}
